@@ -1,7 +1,13 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, View, Pressable, Text} from 'react-native';
+
+import {useAppDispatch, useAppSelector} from 'store';
+import {decrement, increment} from 'store/calculatorSlice';
 
 const Home = () => {
+  const count = useAppSelector(state => state.calculator.value);
+  const dispatch = useAppDispatch();
+
   return (
     <View style={styles.screen}>
       <View style={[styles.box, styles.white]} />
@@ -10,12 +16,20 @@ const Home = () => {
       <View style={[styles.box, styles.orange]} />
       <View style={[styles.box, styles.gray]} />
       <View style={[styles.box, styles.gray_light]} />
+      <Pressable onPress={() => dispatch(increment())}>
+        <Text>Increment</Text>
+      </Pressable>
+      <Text>{count}</Text>
+      <Pressable onPress={() => dispatch(decrement())}>
+        <Text>Decrement</Text>
+      </Pressable>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   screen: {
+    flex: 1,
     backgroundColor: '#007F7F',
   },
   box: {

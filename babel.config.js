@@ -5,6 +5,7 @@ module.exports = {
       {
         alias: {
           pages: './app/pages',
+          store: './app/store',
         },
         root: ['./app'],
         extensions: [

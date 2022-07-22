@@ -9,6 +9,7 @@
     "baseUrl": "./app",
     "paths": {
       "pages": ["pages"],
+      "store": ["store"],
     }
   }
 }
