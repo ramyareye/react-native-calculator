@@ -4,8 +4,8 @@ import {Pressable, StyleProp, TextStyle, ViewStyle} from 'react-native';
 import Text from '../Text';
 
 interface ButtonProps {
-  onPress: () => void;
   title: string;
+  onPress: () => void;
   style?: StyleProp<ViewStyle> | undefined;
   textStyle?: StyleProp<TextStyle> | undefined;
 }

@@ -8,6 +8,7 @@ import {useTheme} from 'providers/theme';
 interface ButtonProps {
   title: string;
   onPress: () => void;
+  color?: 'gray' | 'gray_dark' | 'orange';
   style?: StyleProp<ViewStyle> | undefined;
   textStyle?: StyleProp<TextStyle> | undefined;
 }
@@ -17,6 +18,7 @@ const CalculatorButton: React.FC<ButtonProps> = ({
   style,
   onPress,
   textStyle,
+  color = 'gray',
 }) => {
   const {theme} = useTheme();
 
@@ -27,7 +29,9 @@ const CalculatorButton: React.FC<ButtonProps> = ({
       style={[styles.btn, style]}
       textStyle={[
         styles.btnText,
-        {backgroundColor: theme.colors.color2},
+        color === 'gray' && {backgroundColor: theme.colors.color2},
+        color === 'orange' && {backgroundColor: theme.colors.color4},
+        color === 'gray_dark' && {backgroundColor: theme.colors.color3},
         textStyle,
       ]}
     />
