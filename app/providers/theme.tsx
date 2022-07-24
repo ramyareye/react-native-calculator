@@ -14,9 +14,24 @@ type Theme = {
     color3: string;
     color4: string;
   };
+  fonts: {
+    bold: string;
+    boldItalic: string;
+    italic: string;
+    regular: string;
+    semiBold: string;
+    semiboldItalic: string;
+  };
 };
 
-// // theme from @react-navigation
+const fonts = {
+  bold: 'OpenSans-Bold',
+  boldItalic: 'OpenSans-BoldItalic',
+  italic: 'OpenSans-Italic',
+  regular: 'OpenSans',
+  semiBold: 'OpenSans-Semibold',
+  semiboldItalic: 'OpenSans-SemiboldItalic',
+};
 
 const DarkTheme: Theme = {
   dark: true,
@@ -30,6 +45,7 @@ const DarkTheme: Theme = {
     color3: '#595959',
     color4: '#c97f31',
   },
+  fonts,
 };
 
 const DefaultTheme: Theme = {
@@ -44,6 +60,7 @@ const DefaultTheme: Theme = {
     color3: '#595959',
     color4: '#c97f31',
   },
+  fonts,
 };
 
 const themes = {
@@ -83,7 +100,7 @@ export default function ThemeProvider({children}: {children: React.ReactNode}) {
     const next = theme === 'light' ? 'dark' : 'light';
 
     setTheme(next);
-    console.log('toggleTheme', {next});
+
     await AsyncStorage.setItem('@theme', next);
   }, [theme]);
 

@@ -30,7 +30,10 @@ const Calculator = () => {
           style={[styles.displayInner, {backgroundColor: theme.colors.color1}]}>
           <Text
             title={display}
-            style={[styles.displayText, {color: theme.colors.text}]}
+            style={[
+              styles.displayText,
+              {color: theme.colors.text, fontFamily: theme.fonts.bold},
+            ]}
           />
         </View>
       </View>

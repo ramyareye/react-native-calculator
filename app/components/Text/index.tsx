@@ -12,7 +12,11 @@ const Text = ({title, style}: TextProps) => {
   const {theme} = useTheme();
 
   return (
-    <TextComponent style={[{color: theme.colors.text}, style]}>
+    <TextComponent
+      style={[
+        {color: theme.colors.text, fontFamily: theme.fonts.regular},
+        style,
+      ]}>
       {title}
     </TextComponent>
   );
