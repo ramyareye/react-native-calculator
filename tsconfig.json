@@ -8,8 +8,12 @@
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */,
     "baseUrl": "./app",
     "paths": {
-      "pages": ["pages"],
+      "data": ["data"],
       "store": ["store"],
+      "utils": ["utils"],
+      "screens": ["screens"],
+      "providers": ["providers"],
+      "components": ["components"],
     }
   }
 }

@@ -4,8 +4,12 @@ module.exports = {
       'module-resolver',
       {
         alias: {
-          pages: './app/pages',
+          data: './app/data',
           store: './app/store',
+          utils: './app/utils',
+          screens: './app/screens',
+          components: './app/components',
+          providers: './app/providers',
         },
         root: ['./app'],
         extensions: [
