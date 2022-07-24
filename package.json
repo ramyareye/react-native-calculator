@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.17.7",
     "@reduxjs/toolkit": "^1.8.3",
+    "@shopify/react-native-skia": "^0.1.137",
     "react": "18.0.0",
     "react-native": "0.69.2",
     "react-redux": "^8.0.2"
