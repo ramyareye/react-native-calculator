@@ -37,7 +37,7 @@ const DarkTheme: Theme = {
   dark: true,
   colors: {
     primary: '#007F7F',
-    background: 'rgb(1, 1, 1)',
+    background: '#1e4849',
     card: 'rgb(18, 18, 18)',
     text: 'rgb(229, 229, 231)',
     color1: '#5a6a36',
@@ -52,7 +52,7 @@ const DefaultTheme: Theme = {
   dark: false,
   colors: {
     primary: '#90908e',
-    background: '#357d7e',
+    background: '#111111',
     card: '#272727',
     text: 'rgb(28, 28, 30)',
     color1: '#5a6a36',

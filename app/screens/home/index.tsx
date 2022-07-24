@@ -1,21 +1,20 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 
-import {useTheme} from 'providers/theme';
+import {Matrix} from 'components';
 
 import Toggle from './Toggle';
 import Calculator from './Calculator';
 
 const Home = () => {
-  const {theme} = useTheme();
-
   return (
     <View style={styles.screen}>
-      <View style={[styles.top, {backgroundColor: theme.colors.background}]}>
+      <Matrix style={styles.matrix} />
+      <View style={styles.top}>
         <Calculator />
       </View>
 
-      <View style={[styles.bottom, {backgroundColor: theme.colors.card}]}>
+      <View style={styles.bottom}>
         <Toggle />
       </View>
     </View>
@@ -25,6 +24,11 @@ const Home = () => {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
+  },
+  matrix: {
+    ...StyleSheet.absoluteFillObject,
+    width: '100%',
+    height: '100%',
   },
   top: {
     flex: 1,
