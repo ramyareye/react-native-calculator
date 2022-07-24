@@ -8,11 +8,25 @@ const styles = StyleSheet.create({
     flex: 1,
     maxWidth: calculatorWidth,
     minHeight: calculatorWidth * 1.5,
+
+    shadowOffset: {
+      width: -4,
+      height: 4,
+    },
+    shadowOpacity: 1,
+    shadowRadius: 3.84,
+
+    elevation: 10,
   },
   display: {
     flex: 1,
     padding: 25,
-    minHeight: 75,
+    minHeight: 100,
+
+    overflow: 'hidden',
+    borderTopEndRadius: 10,
+    borderTopStartRadius: 10,
+    borderBottomWidth: 1,
   },
   displayInner: {
     flex: 1,
@@ -23,8 +37,22 @@ const styles = StyleSheet.create({
     flex: 3,
     padding: 25,
     minHeight: 350,
+    borderBottomEndRadius: 10,
+    borderBottomStartRadius: 10,
+  },
+  buttonsInner: {
+    flex: 1,
     flexWrap: 'wrap',
     flexDirection: 'row',
+
+    shadowOffset: {
+      width: -4,
+      height: 4,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 10,
+
+    elevation: 4,
   },
   buttonsLeft: {
     flex: 3,
